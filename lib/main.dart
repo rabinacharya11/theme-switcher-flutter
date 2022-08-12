@@ -19,14 +19,14 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   void dispose() {
-  super.dispose();
-     _themeManager.removeListener(themeManager);
+    super.dispose();
+    _themeManager.removeListener(themeManager);
   }
 
   @override
   void initState() {
-  super.initState();
-_themeManager.addListener(themeManager);
+    super.initState();
+    _themeManager.addListener(themeManager);
   }
 
   themeManager() {
@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).primaryColor,
           title: Text(widget.title),
         ),
         body: Center(
